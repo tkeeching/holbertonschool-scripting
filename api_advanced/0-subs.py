@@ -7,9 +7,9 @@ given subreddit.
 """
 
 import json
+# import sys
 import urllib.error
 import urllib.request
-# import sys
 
 
 def number_of_subscribers(subreddit):
@@ -19,7 +19,9 @@ def number_of_subscribers(subreddit):
         base_url = 'https://api.reddit.com'
         url_path = 'r/{}/about'.format(subreddit)
         headers = {'User-Agent': 'Holberton/1.0'}
-        request = urllib.request.Request('{}/{}'.format(base_url, url_path), headers=headers)
+        request = urllib.request.Request(
+            '{}/{}'.format(base_url, url_path),
+            headers=headers)
         response = urllib.request.urlopen(request)
 
         if response.status == 200:
