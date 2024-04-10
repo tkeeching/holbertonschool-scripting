@@ -31,4 +31,4 @@ def number_of_subscribers(subreddit):
                 return 0
 
     except urllib.error.HTTPError as error:
-        print('HTTP Error: {}'.format(error.reason))
+        return error
