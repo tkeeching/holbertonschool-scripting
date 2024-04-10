@@ -6,10 +6,10 @@ of subscribers (not active users, total subscribers) for a
 given subreddit.
 """
 
-import urllib.error
-import urllib.request
 import json
 import sys
+import urllib.error
+import urllib.request
 
 
 def number_of_subscribers(subreddit):
