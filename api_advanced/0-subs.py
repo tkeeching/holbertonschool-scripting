@@ -7,7 +7,6 @@ given subreddit.
 """
 
 import json
-import sys
 import urllib.error
 import urllib.request
 
@@ -33,9 +32,3 @@ def number_of_subscribers(subreddit):
 
     except urllib.error.HTTPError as error:
         print('HTTP Error: {}'.format(error.reason))
-
-
-if __name__ == '__main__':
-    subreddit = sys.argv[1]
-
-    number_of_subscribers(subreddit)
