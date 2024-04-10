@@ -30,5 +30,12 @@ def number_of_subscribers(subreddit):
             else:
                 return 0
 
-    except urllib.error.HTTPError as error:
-        return error
+    except urllib.error.HTTPError as http_error:
+        return http_error
+    except json.decoder.JSONDecodeError as json_error:
+        return json_error
+
+
+if __name__ == '__main__':
+    print(number_of_subscribers('programming'))
+    print(number_of_subscribers('this_is_a_fake'))
