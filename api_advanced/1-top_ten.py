@@ -11,7 +11,10 @@ import urllib.request
 
 
 def top_ten(subreddit):
-    """Prints the title of the first 10 hot posts listed for a given subreddit"""
+    """
+    Prints the title of the first 10 hot posts listed
+    for a given subreddit
+    """
 
     try:
         base_url = 'https://api.reddit.com'
@@ -38,11 +41,3 @@ def top_ten(subreddit):
         return http_error
     except json.decoder.JSONDecodeError as json_error:
         return json_error
-
-# Test
-# if __name__ == '__main__':
-#     top_ten = __import__('1-top_ten').top_ten
-#     if len(sys.argv) < 2:
-#         print("Please pass an argument for the subreddit to search.")
-#     else:
-#         top_ten(sys.argv[1])
