@@ -55,16 +55,3 @@ def recurse(subreddit, hot_list=[], after=None):
     except json.decoder.JSONDecodeError as json_error:
         print(f"JSON Decode Error: {json_error}")
         return json_error
-
-
-# Test
-# if __name__ == '__main__':
-#     recurse = __import__('2-recurse').recurse
-#     if len(sys.argv) < 2:
-#         print("Please pass an argument for the subreddit to search.")
-#     else:
-#         result = recurse(sys.argv[1])
-#         if result is not None:
-#             print(len(result))
-#         else:
-#             print("None")
