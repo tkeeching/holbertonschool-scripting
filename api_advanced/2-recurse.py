@@ -20,7 +20,7 @@ def recurse(subreddit, hot_list=[], after=None):
     try:
         base_url = 'https://api.reddit.com'
         url_path = 'r/{}/hot'.format(subreddit)
-        headers = {'User-Agent': 'Holberton/1.0'}
+        # headers = {'User-Agent': 'Holberton/1.0'}
 
         # Include 'after' parameter in URL if it exists
         if after:
