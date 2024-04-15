@@ -27,8 +27,7 @@ def recurse(subreddit, hot_list=[], after=None):
             url_path += f'?after={after}'
 
         request = urllib.request.Request(
-            '{}/{}'.format(base_url, url_path),
-            headers=headers)
+            '{}/{}'.format(base_url, url_path))
         response = urllib.request.urlopen(request)
 
         if response.status == 200:
